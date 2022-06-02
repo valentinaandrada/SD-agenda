@@ -1,0 +1,16 @@
+.agenda-container {
+padding: 5rem
+}
+
+table {
+  width: 100%;
+  margin-top: 2rem;
+}
+
+td {
+  text-transform: capitalize;
+}
+
+th:not(:last-of-type) {
+  width: 13%;
+}
