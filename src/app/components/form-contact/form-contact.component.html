@@ -5,30 +5,50 @@
       <mat-form-field color="primary" class="input">
         <mat-label>Name</mat-label>
         <input matInput type="text" formControlName="name" />
-        <mat-error *ngIf="contactForm.controls['name'].hasError('minlength')">Name should be at least 3 characters</mat-error>
-        <mat-error *ngIf="contactForm.controls['name'].hasError('required')">This field is required</mat-error> </mat-form-field
+        <mat-error *ngIf="contactForm.controls['name'].hasError('minlength')"
+          >Name should be at least 3 characters</mat-error
+        >
+        <mat-error *ngIf="contactForm.controls['name'].hasError('required')"
+          >This field is required</mat-error
+        > </mat-form-field
       ><br />
       <mat-form-field color="primary" class="input">
         <mat-label>Surname</mat-label>
         <input matInput type="text" formControlName="surname" />
-        <mat-error *ngIf="contactForm.controls['surname'].hasError('minlength')">Surname should be at least 3 characters.</mat-error>
-        <mat-error *ngIf="contactForm.controls['surname'].hasError('required')">Surname is required</mat-error> </mat-form-field
+        <mat-error *ngIf="contactForm.controls['surname'].hasError('minlength')"
+          >Surname should be at least 3 characters.</mat-error
+        >
+        <mat-error *ngIf="contactForm.controls['surname'].hasError('required')"
+          >Surname is required</mat-error
+        > </mat-form-field
       ><br />
       <mat-form-field color="primary" class="input">
         <mat-label>Age</mat-label>
         <input matInput type="number" min="0" formControlName="age" />
-        <mat-error *ngIf="contactForm.controls['age'].hasError('min') || contactForm.controls['age'].hasError('max')">Please provide a valid age</mat-error>
-        <mat-error *ngIf="contactForm.controls['age'].hasError('required')">This field is required</mat-error> </mat-form-field
+        <mat-error
+          *ngIf="
+            contactForm.controls['age'].hasError('min') ||
+            contactForm.controls['age'].hasError('max')
+          "
+          >Please provide a valid age</mat-error
+        >
+        <mat-error *ngIf="contactForm.controls['age'].hasError('required')"
+          >This field is required</mat-error
+        > </mat-form-field
       ><br />
       <mat-form-field color="primary" class="input">
         <mat-label>DNI</mat-label>
-        <input
-          matInput
-          type="text"
-          formControlName="dni"
-        />
-        <mat-error *ngIf="contactForm.controls['dni'].hasError('minlength') || contactForm.controls['dni'].hasError('maxlength')">DNI must have 9 characters</mat-error>
-        <mat-error *ngIf="contactForm.controls['dni'].hasError('required')">This field is required</mat-error> </mat-form-field
+        <input matInput type="text" formControlName="dni" />
+        <mat-error
+          *ngIf="
+            contactForm.controls['dni'].hasError('minlength') ||
+            contactForm.controls['dni'].hasError('maxlength')
+          "
+          >DNI must have 9 characters</mat-error
+        >
+        <mat-error *ngIf="contactForm.controls['dni'].hasError('required')"
+          >This field is required</mat-error
+        > </mat-form-field
       ><br />
       <mat-form-field color="primary" class="input">
         <mat-label>Gender</mat-label>
@@ -39,25 +59,31 @@
             }}</mat-option>
           </ng-container>
         </mat-select>
-        <mat-error *ngIf="contactForm.controls['gender'].hasError('required')">This field is required</mat-error> </mat-form-field
+        <mat-error *ngIf="contactForm.controls['gender'].hasError('required')"
+          >This field is required</mat-error
+        > </mat-form-field
       ><br />
       <mat-form-field color="primary" class="input">
         <mat-label>Favourite Colour</mat-label>
-        <input
-          matInput
-          type="text"
-          formControlName="favouriteColour"
-        />
-        <mat-error *ngIf="contactForm.controls['favouriteColour'].hasError('minlength')">Favourite colour should be at least 3 characters</mat-error>
-        <mat-error *ngIf="contactForm.controls['favouriteColour'].hasError('required')">This field is required</mat-error> </mat-form-field
+        <input matInput type="text" formControlName="favouriteColour" />
+        <mat-error
+          *ngIf="contactForm.controls['favouriteColour'].hasError('minlength')"
+          >Favourite colour should be at least 3 characters</mat-error
+        >
+        <mat-error
+          *ngIf="contactForm.controls['favouriteColour'].hasError('required')"
+          >This field is required</mat-error
+        > </mat-form-field
       ><br />
       <mat-form-field color="primary" class="input">
         <mat-label>Birthday</mat-label>
-        <input matInput [matDatepicker]="picker" formControlName="birthday">
+        <input matInput [matDatepicker]="picker" formControlName="birthday" />
         <mat-hint>DD/MM/YYYY</mat-hint>
         <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
         <mat-datepicker #picker></mat-datepicker>
-        <mat-error *ngIf="contactForm.controls['birthday'].hasError('required')">This field is required</mat-error> </mat-form-field
+        <mat-error *ngIf="contactForm.controls['birthday'].hasError('required')"
+          >This field is required</mat-error
+        > </mat-form-field
       ><br />
     </div>
     <button
@@ -70,7 +96,12 @@
     >
       {{ actionBtn }}
     </button>
-    <button mat-stroked-button color="primary" (click)="closeDialog()" class="form-btn">
+    <button
+      mat-stroked-button
+      color="primary"
+      (click)="closeDialog()"
+      class="form-btn"
+    >
       Cancel
     </button>
   </form>

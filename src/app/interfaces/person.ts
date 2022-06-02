@@ -1,7 +1,7 @@
 export interface Person {
   name: String;
   surname: String;
-  age: any;
+  age: number;
   dni: String;
   birthday: any;
   favouriteColour: String;

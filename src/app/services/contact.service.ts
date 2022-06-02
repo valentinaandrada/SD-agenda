@@ -1,34 +1,23 @@
 import { DatePipe } from '@angular/common';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
 import { Person } from '../interfaces/person';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 
 export class ContactService {
 
-  listContacts: Array<Person> = [
-    // {
-    //   name: 'Valentina',
-    //   surname: 'Andrada',
-    //   age: 28,
-    //   dni: '33333333P',
-    //   birthday: '28/04/1990',
-    //   favouriteColour: 'green',
-    //   gender: 'Female',
-    // }
-  ];
+  listContacts: Array<Person> = [];
 
-  constructor( private datePipe: DatePipe) { }
+  constructor(private datePipe: DatePipe) {}
 
   getContacts() {
-    return this.listContacts
+    return this.listContacts;
   }
 
-  getContact(index:number){
-    return this.listContacts[index]
+  getContact(index: number) {
+    return this.listContacts[index];
   }
 
   removeContact(index: number): void {
@@ -40,12 +29,11 @@ export class ContactService {
   }
 
   editContact(contact: Person) {
-    console.log(contact)
+    console.log(contact);
     return contact;
   }
 
   formatDate(date: any) {
-    return this.datePipe.transform(date, 'dd/MM/yyyy')
+    return this.datePipe.transform(date, 'dd/MM/yyyy');
   }
-
 }

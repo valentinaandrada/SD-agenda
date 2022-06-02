@@ -1,6 +1,6 @@
 
 .form-container{
-  padding: 2rem 3rem;
+  padding: 1rem 3rem;
 }
 
 h1 {
@@ -11,7 +11,7 @@ h1 {
 .input {
   width: 100%;
   text-transform: capitalize;
-  padding-bottom: 0.3rem;
+  padding-bottom: 0.2rem;
 }
 
 .hidden {
